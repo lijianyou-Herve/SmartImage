@@ -71,11 +71,16 @@ public class MulStructureView extends AppCompatImageView {
     }
 
     @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, widthMeasureSpec);
+    }
+
+    @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-        if (w > 0 && h > 0) {
+        super.onSizeChanged(w, w, oldw, oldw);
+        if (w > 0 && w > 0) {
             mViewWidth = w;
-            mViewHeight = h;
+            mViewHeight = w;
             setRect();
         }
     }
@@ -108,7 +113,7 @@ public class MulStructureView extends AppCompatImageView {
      * @param width   the width 矩形宽度
      * @param height  the height 矩形豪赌
      */
-    public void drawRoundRect(Canvas canvas, float centerX, float centerY, float width, float height, int position) {
+    private void drawRoundRect(Canvas canvas, float centerX, float centerY, float width, float height, int position) {
         drawDrawable(canvas, centerX, centerY, width, height, position);
         canvas.save();
         //虚线
@@ -184,7 +189,7 @@ public class MulStructureView extends AppCompatImageView {
         FourSplit,//四分屏
     }
 
-    private Model mModel = Model.Sym;
+    private Model mModel = Model.FourSplit;
 
     private float downX = -1;
     private float downY = -1;

@@ -57,8 +57,6 @@
         tools:orientation="vertical"
         tools:spanCount="3" />
 
-    <!--<MulStructureView-->
-
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tv_location"
         android:layout_width="wrap_content"

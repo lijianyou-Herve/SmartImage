@@ -1,11 +1,12 @@
 package com.herve.library.smartimage
 
+import android.graphics.drawable.Drawable
 import android.support.v7.widget.LinearLayoutManager
 import com.herve.library.smartimage.adapter.MomentAdapter
 import com.herve.library.smartimage.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v7.widget.DividerItemDecoration
-
+import android.util.SparseArray
 
 
 class MainActivity : BaseActivity() {
@@ -32,5 +33,13 @@ class MainActivity : BaseActivity() {
             list.add("第" + value + "个动态")
         }
         momentAdapter.notifyDataSetChanged()
+
+        var drawables: SparseArray<Drawable> = SparseArray()
+
+        for (i in 0..3) {
+            drawables.append(i,getDrawable( R.drawable.perholder))
+        }
+
+        mul_view.drawables = drawables
     }
 }
