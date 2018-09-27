@@ -1,7 +1,7 @@
 package com.herve.library.smartimage.adapter;
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import android.graphics.Bitmap
 import android.view.View
 import android.view.ViewGroup
 
@@ -10,7 +10,7 @@ import android.view.ViewGroup
  * @author  Lijianyou
  *
  */
-abstract class RecyclerViewSimpleAdapter(private val mContext: Context, private var mList: MutableList<String>) : RecyclerView.Adapter<com.herve.library.smartimage.adapter.RecyclerViewSimpleAdapter.SimpleViewHolder>() {
+abstract class RecyclerViewSimpleAdapter(private val mContext: Context, private var mList: MutableList<Bitmap>) : androidx.recyclerview.widget.RecyclerView.Adapter<com.herve.library.smartimage.adapter.RecyclerViewSimpleAdapter.SimpleViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleViewHolder {
         val itemView = getItemView(parent)
@@ -23,8 +23,13 @@ abstract class RecyclerViewSimpleAdapter(private val mContext: Context, private 
     abstract fun getItemView(parent: ViewGroup): View
 
     final override fun getItemCount(): Int {
-        return mList.size
+        return when {
+            mList.size > 0 -> mList.size
+            else -> placeholder()
+        }
     }
+
+    abstract fun placeholder(): Int
 
     final override fun onBindViewHolder(holder: SimpleViewHolder, position: Int) {
         holder.itemView.setOnClickListener {
@@ -34,10 +39,10 @@ abstract class RecyclerViewSimpleAdapter(private val mContext: Context, private 
         onBindView(holder.itemView, position)
     }
 
-    abstract fun onItemClickListener(holder: SimpleViewHolder, it: View?, position: Int)
+    abstract fun onItemClickListener(holder: SimpleViewHolder, it: View, position: Int)
 
     abstract fun onBindView(itemView: View, position: Int)
 
-    class SimpleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class SimpleViewHolder(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
     }
 }

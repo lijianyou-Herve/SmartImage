@@ -3,9 +3,9 @@ package com.herve.library.wedgetlib
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Canvas
-import android.support.annotation.IntDef
 import android.util.AttributeSet
 import android.view.View
+import androidx.annotation.IntDef
 
 /**
  * Created by Lijianyou on 2018-09-26.
@@ -20,9 +20,9 @@ class ShapeCropView : View {
     annotation class Shape
 
     companion object {
-        const val CIRCLE: Long = 0x00
-        const val RANGE: Long = 0x01
-        const val TRIANGLE: Long = 0x02
+        const val CIRCLE: Int = 0x00
+        const val RANGE: Int = 0x01
+        const val TRIANGLE: Int = 0x02
     }
 
     constructor(context: Context?) : this(context, null)

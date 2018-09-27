@@ -1,6 +1,6 @@
 package com.herve.library.smartimage.impl
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 
 /**
@@ -9,5 +9,5 @@ import android.view.View
  *
  */
 interface OnAdapterItemClickListener {
-    fun onAdapterItemClickListener(viewHolder: RecyclerView.ViewHolder, view: View, ppsition: Int)
+    fun onAdapterItemClickListener(viewHolder: androidx.recyclerview.widget.RecyclerView.ViewHolder, view: View, ppsition: Int)
 }

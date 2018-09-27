@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/include_moment"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/item_moment_layout" />
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <com.herve.library.wedgetlib.MulStructureView
-        android:id="@+id/mul_view"
+        <include
+            android:id="@+id/include_moment"
+            layout="@layout/item_moment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_select_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        app:fabSize="normal"
+        app:layout_anchor="@id/bottom_bar"
+        app:layout_anchorGravity="bottom"
+        app:navigationIcon="@mipmap/ic_launcher" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
         android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/tv_user_name"
-        app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/colorAccent" />
 
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-</android.support.constraint.ConstraintLayout>
