@@ -6,20 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_moment"
+    <include
+        android:id="@+id/include_moment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:itemCount="4"
-        android:visibility="gone"
-        tools:lauoutManager="LinearLayoutManager"
-        tools:listitem="@layout/item_moment_layout">
-
-    </android.support.v7.widget.RecyclerView>
+        layout="@layout/item_moment_layout" />
 
     <com.herve.library.wedgetlib.MulStructureView
         android:id="@+id/mul_view"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/tv_user_name"
         app:layout_constraintTop_toBottomOf="@+id/tv_content" />

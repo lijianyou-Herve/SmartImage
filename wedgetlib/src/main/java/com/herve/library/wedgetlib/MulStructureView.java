@@ -68,6 +68,8 @@ public class MulStructureView extends AppCompatImageView {
         buttonPaint.setStyle(Paint.Style.FILL);//设置画笔style实心
         buttonPaint.setAntiAlias(true);
         buttonPaint.setStrokeWidth(roundR * 2);
+
+        setWillNotDraw(false);
     }
 
     @Override
