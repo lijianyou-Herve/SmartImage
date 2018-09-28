@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.herve.library.smartimage.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/mainPage2Fragment"
+        android:name="com.herve.library.smartimage.fragments.MainPage2Fragment"
+        android:label="MainPage2Fragment" />
+    <fragment
+        android:id="@+id/mainPage3Fragment"
+        android:name="com.herve.library.smartimage.fragments.MainPage3Fragment"
+        android:label="MainPage3Fragment" />
+</navigation>
