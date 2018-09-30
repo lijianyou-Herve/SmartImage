@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SmartImage</string>
+    <string name="count01">1</string>
+    <string name="count02">2</string>
+    <string name="count03">3</string>
+    <string name="count04">4</string>
+    <string name="count06">6</string>
+    <string name="count08">8</string>
+    <string name="count09">9</string>
 </resources>

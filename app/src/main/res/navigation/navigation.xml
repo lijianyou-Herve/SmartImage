@@ -9,10 +9,14 @@
         android:label="MainActivity" />
     <fragment
         android:id="@+id/mainPage2Fragment"
-        android:name="com.herve.library.smartimage.fragments.MainPage2Fragment"
+        android:name="com.herve.library.smartimage.fragments.BottomNavigationDrawerFragment"
         android:label="MainPage2Fragment" />
     <fragment
         android:id="@+id/mainPage3Fragment"
         android:name="com.herve.library.smartimage.fragments.MainPage3Fragment"
-        android:label="MainPage3Fragment" />
+        android:label="MainPage3Fragment" >
+        <action
+            android:id="@+id/action_mainPage3Fragment_to_mainPage2Fragment"
+            app:destination="@id/mainPage2Fragment" />
+    </fragment>
 </navigation>

@@ -5,18 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="match_parent">
 
-        <include
-            android:id="@+id/include_moment"
-            layout="@layout/item_moment_layout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dp_60"
+            tools:context=".MainActivity">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <include
+                android:id="@+id/include_moment"
+                layout="@layout/item_moment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_select_picture"
@@ -33,8 +40,14 @@
         style="@style/Widget.MaterialComponents.BottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:backgroundTint="@color/colorAccent"
         android:layout_gravity="bottom"
-        android:backgroundTint="@color/colorAccent" />
+        android:showAsAction="ifRoom"
+        app:fabAlignmentMode="center"
+        app:menu="@menu/menu_select"
+        app:navigationIcon="@drawable/ic_view_module_white_24dp">
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

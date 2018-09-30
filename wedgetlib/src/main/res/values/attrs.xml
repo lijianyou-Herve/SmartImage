@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ShapeCropView">
+    <declare-styleable name="SquareSlicerCropView">
+
+        <attr name="itemCount" format="integer" />
+        <attr name="spanCount" format="integer" />
 
     </declare-styleable>
 </resources>

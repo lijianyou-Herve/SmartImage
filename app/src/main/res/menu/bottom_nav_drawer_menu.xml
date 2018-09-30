@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav1"
+            android:icon="@drawable/ic_view_quilt_white_24dp"
+            android:title="@string/count01" />
+        <item
+            android:id="@+id/nav2"
+            android:icon="@drawable/ic_view_quilt_white_24dp"
+            android:title="@string/count02" />
+        <item
+            android:id="@+id/nav3"
+            android:icon="@drawable/ic_view_quilt_white_24dp"
+            android:title="@string/count03" />
+        <item
+            android:id="@+id/nav4"
+            android:icon="@drawable/ic_view_quilt_white_24dp"
+            android:title="@string/count04" />
+        <item
+            android:id="@+id/nav6"
+            android:icon="@drawable/ic_view_quilt_white_24dp"
+            android:title="@string/count06" />
+        <item
+            android:id="@+id/nav8"
+            android:icon="@drawable/ic_view_quilt_white_24dp"
+            android:title="@string/count08" />
+        <item
+            android:id="@+id/nav9"
+            android:icon="@drawable/ic_view_quilt_white_24dp"
+            android:title="@string/count09" />
+    </group>
+</menu>
